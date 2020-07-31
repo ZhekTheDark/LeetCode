@@ -1,4 +1,11 @@
 /**
+ * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+ * You may assume that each input would have exactly one solution, and you may not use the same element twice.
+ *
+ * Дан массив и значение. Нужно вывести 2 индекса элементов массива, сумма которых равно значению.
+ */
+
+/**
  * Complexity Analysis
  * Time complexity : O(n^2).
  * Space complexity : O(1).
@@ -37,6 +44,7 @@ fun twoSum(nums: IntArray, target: Int): IntArray? {
 
 fun main(){
     val testArray = intArrayOf(3, 4, 2, 6, 2, 7, 11, 15)
-    val res = twoSum(testArray, 9)
+    val target = 11
+    val res = twoSum(testArray, target)
     println("${res!![0]}  ${res[1]}")
 }

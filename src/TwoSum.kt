@@ -6,7 +6,7 @@
  */
 
 /**
- * Complexity Analysis
+ * Complexity Analysis:
  * Time complexity : O(n^2).
  * Space complexity : O(1).
  */
@@ -42,7 +42,7 @@ fun twoSum(nums: IntArray, target: Int): IntArray? {
     throw java.lang.IllegalArgumentException("No two sum solution")
 }
 
-fun main(){
+fun main() {
     val testArray = intArrayOf(3, 4, 2, 6, 2, 7, 11, 15)
     val target = 11
     val res = twoSum(testArray, target)

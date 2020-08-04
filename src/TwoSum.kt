@@ -12,17 +12,22 @@
  */
 
 /*fun twoSum(nums: IntArray, target: Int): IntArray? {
+
     val map: MutableMap<Int, Int> = HashMap()
+
     for (i in nums.indices) {
         map[nums[i]] = i
     }
+
     for (i in nums.indices) {
         val complement = target - nums[i]
         if (map.containsKey(complement) && map[complement] != i) {
             return intArrayOf(i, map[complement]!!)
         }
     }
+
     throw IllegalArgumentException("No two sum solution")
+
 }*/
 
 /**
@@ -30,8 +35,11 @@
  * Time complexity : O(n).
  * Space complexity : O(n).
  */
+
 fun twoSum(nums: IntArray, target: Int): IntArray? {
+
     val map: MutableMap<Int, Int> = HashMap()
+
     for (i in nums.indices) {
         val complement = target - nums[i]
         if (map.containsKey(complement)) {
@@ -39,12 +47,17 @@ fun twoSum(nums: IntArray, target: Int): IntArray? {
         }
         map[nums[i]] = i
     }
+
     throw java.lang.IllegalArgumentException("No two sum solution")
+
 }
 
 fun main() {
+
     val testArray = intArrayOf(3, 4, 2, 6, 2, 7, 11, 15)
     val target = 11
     val res = twoSum(testArray, target)
+
     println("${res!![0]}  ${res[1]}")
+
 }

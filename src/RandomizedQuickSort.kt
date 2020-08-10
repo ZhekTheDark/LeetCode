@@ -1,9 +1,9 @@
 import kotlin.random.Random
 
 /**
- * Quick sort
+ * Randomized Quick sort
  *
- * Быстрая сортировка
+ * Быстрая cлучайная сортировка
  *
  * Complexity Analysis:
  * Time complexity : O(n*log(n)).

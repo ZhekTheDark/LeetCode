@@ -9,19 +9,19 @@
  * Complexity Analysis:
  * Time complexity : O(n^2).
  * Space complexity : O(1).
+ */
 
-fun twoSum(nums: IntArray, target: Int): IntArray? {
+/*fun twoSum(nums: IntArray, target: Int): IntArray? {
 
-    val map: MutableMap<Int, Int> = HashMap()
-
-    for (i in nums.indices) {
-        map[nums[i]] = i
-    }
+    val result = IntArray(2)
 
     for (i in nums.indices) {
-        val complement = target - nums[i]
-        if (map.containsKey(complement) && map[complement] != i) {
-            return intArrayOf(i, map[complement]!!)
+        for (j in i + 1 until nums.size) {
+            if (nums[i] + nums[j] == target) {
+                result[0] = i
+                result[1] = j
+                return result
+            }
         }
     }
 

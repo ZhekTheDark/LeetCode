@@ -19,6 +19,12 @@
  * Дан массив. Нужно вернуть массив, каждый элемент которого равен сумме всех предшествующих элементов и текущего элемента заданного массива.
  */
 
+/**
+ * Complexity Analysis
+ * Time complexity : O(n).
+ * Space complexity : O(1).
+ */
+
 private fun runningSum(nums: IntArray): IntArray {
 
     for (i in 1 until nums.size) {
@@ -31,7 +37,7 @@ private fun runningSum(nums: IntArray): IntArray {
 
 private fun main() {
 
-    val nums = intArrayOf(3,1,2,10,1)
+    val nums = intArrayOf(3, 1, 2, 10, 1)
 
     println(runningSum(nums).joinToString())
 

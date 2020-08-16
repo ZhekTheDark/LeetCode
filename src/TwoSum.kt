@@ -39,6 +39,9 @@ fun twoSum(nums: IntArray, target: Int): IntArray? {
  * Complexity Analysis
  * Time complexity : O(n).
  * Space complexity : O(n).
+ *
+ * Runtime: 180 ms, faster than 94.97% of Kotlin online submissions for Two Sum.
+ * Memory Usage: 35.1 MB, less than 76.70% of Kotlin online submissions for Two Sum.
  */
 
 fun twoSum(nums: IntArray, target: Int): IntArray? {

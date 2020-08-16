@@ -34,6 +34,9 @@
  * Complexity Analysis:
  * Time complexity : O(n).
  * Space complexity : O(1).
+ *
+ * Runtime: 280 ms, faster than 66.67% of Kotlin online submissions for Longest Subarray of 1's After Deleting One Element.
+ * Memory Usage: 45.1 MB, less than 73.33% of Kotlin online submissions for Longest Subarray of 1's After Deleting One Element.
  */
 private fun longestSubarray(nums: IntArray): Int {
 

@@ -23,6 +23,9 @@
  * Complexity Analysis
  * Time complexity : O(n).
  * Space complexity : O(1).
+ *
+ * Runtime: 160 ms, faster than 98.12% of Kotlin online submissions for Running Sum of 1d Array.
+ * Memory Usage: 34.1 MB, less than 92.47% of Kotlin online submissions for Running Sum of 1d Array.
  */
 
 private fun runningSum(nums: IntArray): IntArray {

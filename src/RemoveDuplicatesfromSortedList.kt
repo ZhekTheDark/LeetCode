@@ -11,6 +11,9 @@
  *
  */
 
+class ListNode(var `val`: Int) {
+    var next: ListNode? = null
+}
 
 /**
  * Complexity Analysis
@@ -20,7 +23,7 @@
  * Runtime: 172 ms, faster than 94.83% of Kotlin online submissions for Remove Duplicates from Sorted List.
  * Memory Usage: 34.2 MB, less than 56.90% of Kotlin online submissions for Remove Duplicates from Sorted List.
  */
-private fun deleteDuplicates(head: ListNode?): ListNode? {
+private fun deleteDuplicates(head: ListNode): ListNode? {
 
     val result = ListNode(0).apply { next = head }
     var previouslyNode = result
@@ -28,7 +31,7 @@ private fun deleteDuplicates(head: ListNode?): ListNode? {
     while (previouslyNode.next != null) {
         val currentNode = previouslyNode.next!!
 
-        if (currentNode.`val` == currentNode.next?.`val`){
+        if (currentNode.`val` == currentNode.next?.`val`) {
             previouslyNode.next = currentNode.next
         } else {
             previouslyNode = currentNode
@@ -82,7 +85,7 @@ fun main() {
     val listNode22 = ListNode(1).apply { next = listNode23 }
     val listNode21 = ListNode(1).apply { next = listNode22 }
 
-    println(deleteDuplicates(listNode11)?.joinToString() ?: "null")
-    println(deleteDuplicates(listNode21)?.joinToString() ?: "null")
+//    println(deleteDuplicates(listNode11).joinToString() ?: "null")
+//    println(deleteDuplicates(listNode21).joinToString() ?: "null")
 
 }

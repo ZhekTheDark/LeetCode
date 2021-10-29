@@ -1,9 +1,7 @@
-import kotlin.random.Random
-
 /**
- * Randomized Quick sort
+ * Quick sort
  *
- * Быстрая cлучайная сортировка
+ * Быстрая сортировка
  *
  * Complexity Analysis:
  * Time complexity : O(n*log(n)).
@@ -11,28 +9,14 @@ import kotlin.random.Random
  */
 
 private fun quickSort(array: IntArray, start: Int, end: Int) {
-
     if (start < end) {
-        val q = randomizedPartition(array, start, end)
+        val q = partition(array, start, end)
         quickSort(array, start, q - 1)
         quickSort(array, q + 1, end)
     }
-
-}
-
-private fun randomizedPartition(array: IntArray, start: Int, end: Int): Int {
-
-    val i = Random.nextInt(start, end + 1)
-
-    val temp = array[end]
-    array[end] = array[i]
-    array[i] = temp
-
-    return (partition(array, start, end))
 }
 
 private fun partition(array: IntArray, start: Int, end: Int): Int {
-
     val x = array[end]
     var i = start - 1
 
@@ -50,18 +34,14 @@ private fun partition(array: IntArray, start: Int, end: Int): Int {
     array[end] = temp
 
     return (i + 1)
-
 }
 
 fun main() {
-
     val array = intArrayOf(2, 8, 7, 1, 3, 5, 6, 4)
 
     println("Before QuickSort\n ${array.joinToString()}")
 
     quickSort(array, 0, array.size - 1)
-    array.sort()
 
     println("\nAfter QuickSort\n ${array.joinToString()}")
-
 }

@@ -9,18 +9,15 @@
  */
 
 private fun mergeSort(array: IntArray, start: Int, end: Int) {
-
     if (start < end) {
         val middle = (start + end) / 2
         mergeSort(array, start, middle)
         mergeSort(array, middle + 1, end)
         merge(array, start, middle, end)
     }
-
 }
 
 private fun merge(array: IntArray, start: Int, middle: Int, end: Int) {
-
     val indexLeft = middle - start + 1
     val indexRight = end - middle
     val leftSubArray = mutableListOf<Int>()
@@ -45,11 +42,9 @@ private fun merge(array: IntArray, start: Int, middle: Int, end: Int) {
             j++
         }
     }
-
 }
 
 fun main() {
-
     val array = intArrayOf(5, 8, 2, 4, 7, 6, 1, 3)
 
     println("Before MergeSort\n ${array.joinToString()}")
@@ -57,5 +52,4 @@ fun main() {
     mergeSort(array, 0, array.size - 1)
 
     println("\nAfter MergeSort\n ${array.joinToString()}")
-
 }

@@ -9,8 +9,7 @@
  */
 
 private fun countingSort(array: IntArray) {
-
-    val countsArray = Array(array.max()!! + 1) { 0 }
+    val countsArray = Array((array.maxOrNull() ?: 0) + 1) { 0 }
     val sortedArray = Array(array.size) { 0 }
 
     for (i in array.indices)
@@ -27,11 +26,9 @@ private fun countingSort(array: IntArray) {
     for (i in array.indices) {
         array[i] = sortedArray[i]
     }
-
 }
 
 fun main() {
-
     val array = intArrayOf(2, 5, 3, 0, 2, 3, 0, 3)
 
     println("Before CountingSort\n ${array.joinToString()}")
@@ -39,5 +36,4 @@ fun main() {
     countingSort(array)
 
     println("\nAfter CountingSort\n ${array.joinToString()}")
-
 }

@@ -52,6 +52,6 @@ fun main() {
     val listNode12 = ListNode(2).apply { next = listNode13 }
     val listNode11 = ListNode(1).apply { next = listNode12 }
 
-    println(deleteDuplicates(listNode11)?.joinToString() ?: "null")
+//    println(deleteDuplicates(listNode11)?.joinToString() ?: "null")
 
 }

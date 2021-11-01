@@ -4,7 +4,7 @@
  * Быстрая сортировка
  *
  * Complexity Analysis:
- * Time complexity : O(n*log(n)).
+ * Time complexity : O(n*log(n)) worst: O(n^2).
  * Space complexity : O(1).
  */
 

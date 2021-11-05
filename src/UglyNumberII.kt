@@ -22,7 +22,6 @@ import kotlin.math.min
  * Memory Usage: 33.8 MB, less than 81.25% of Kotlin online submissions for Ugly Number II.
  */
 fun nthUglyNumber(n: Int): Int {
-
     var last2 = 0
     var last3 = 0
     var last5 = 0
@@ -51,7 +50,6 @@ fun nthUglyNumber(n: Int): Int {
     }
 
     return (result[n - 1])
-
 }
 
 fun main() {

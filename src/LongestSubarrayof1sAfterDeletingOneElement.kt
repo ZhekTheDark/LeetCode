@@ -39,7 +39,6 @@
  * Memory Usage: 45.1 MB, less than 73.33% of Kotlin online submissions for Longest Subarray of 1's After Deleting One Element.
  */
 private fun longestSubarray(nums: IntArray): Int {
-
     var i = 0
     var max = 0
     var start = 0
@@ -59,11 +58,9 @@ private fun longestSubarray(nums: IntArray): Int {
     }
 
     return if (max == nums.size) max - 1 else max
-
 }
 
 private fun main() {
-
     val array1 = intArrayOf(1, 1, 0, 1)
     val array2 = intArrayOf(0, 1, 1, 1, 0, 1, 1, 0, 1)
     val array3 = intArrayOf(1, 1, 1)
@@ -79,5 +76,4 @@ private fun main() {
     if (longestSubarray(array5) != 0) println("\u001B[31m 5")
     if (longestSubarray(array6) != 1) println("\u001B[31m 6")
     if (longestSubarray(array7) != 2) println("\u001B[31m 7")
-
 }

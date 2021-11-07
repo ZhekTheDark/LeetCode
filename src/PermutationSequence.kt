@@ -32,7 +32,6 @@
  */
 
 fun getPermutation(n: Int, k: Int): String {
-
     val factorialArray = IntArray(n - 1) { 1 }
     for (i in 1 until factorialArray.size) {
         factorialArray[i] = factorialArray[i - 1] * (i + 1)
@@ -53,11 +52,8 @@ fun getPermutation(n: Int, k: Int): String {
     res += possibleNumbers[0]
 
     return (res)
-
 }
 
 fun main() {
-
     println(getPermutation(4, 9))
-
 }

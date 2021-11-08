@@ -30,7 +30,6 @@ fun findRelativeRanks(nums: IntArray): Array<String> {
 }
 
 fun main() {
-
     val array1 = intArrayOf(5, 4, 3, 2, 1)
     val array2 = intArrayOf(10, 3, 8, 9, 4)
     val array3 = intArrayOf(1, 2, 3)
@@ -40,5 +39,4 @@ fun main() {
     println(findRelativeRanks(array2).joinToString())
     println(findRelativeRanks(array3).joinToString())
     println(findRelativeRanks(array4).joinToString())
-
 }

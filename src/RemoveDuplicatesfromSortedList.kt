@@ -10,7 +10,6 @@
  * Output: 1->2->3
  *
  */
-
 class ListNode(var `val`: Int) {
     var next: ListNode? = null
 }
@@ -24,7 +23,6 @@ class ListNode(var `val`: Int) {
  * Memory Usage: 34.2 MB, less than 56.90% of Kotlin online submissions for Remove Duplicates from Sorted List.
  */
 private fun deleteDuplicates(head: ListNode): ListNode? {
-
     val result = ListNode(0).apply { next = head }
     var previouslyNode = result
 
@@ -39,7 +37,6 @@ private fun deleteDuplicates(head: ListNode): ListNode? {
     }
 
     return result.next
-
 }
 
 /**
@@ -51,7 +48,6 @@ private fun deleteDuplicates(head: ListNode): ListNode? {
  * Memory Usage: 34.1 MB, less than 63.79% of Kotlin online submissions for Remove Duplicates from Sorted List.
  */
 /*private fun deleteDuplicates(head: ListNode?): ListNode? {
-
     if (head?.next == null) return head
 
     var temp = head
@@ -65,12 +61,10 @@ private fun deleteDuplicates(head: ListNode): ListNode? {
     }
 
     return head
-
 }*/
 
 
 fun main() {
-
     val listNode17 = ListNode(5)
     val listNode16 = ListNode(4).apply { next = listNode17 }
     val listNode15 = ListNode(4).apply { next = listNode16 }
@@ -87,5 +81,4 @@ fun main() {
 
 //    println(deleteDuplicates(listNode11).joinToString() ?: "null")
 //    println(deleteDuplicates(listNode21).joinToString() ?: "null")
-
 }

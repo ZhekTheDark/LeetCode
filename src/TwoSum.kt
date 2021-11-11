@@ -1,3 +1,6 @@
+import kotlin.test.assertContentEquals
+import kotlin.test.assertEquals
+
 /**
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -63,5 +66,5 @@ fun main() {
     val target = 11
     val res = twoSum(testArray, target)
 
-    println("${res!![0]}  ${res[1]}")
+    assertContentEquals(intArrayOf(1, 5), res,  "")
 }

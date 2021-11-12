@@ -1,3 +1,5 @@
+import kotlin.test.assertContentEquals
+
 /**
  * Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
  * Return the running sum of nums.
@@ -39,5 +41,6 @@ private fun runningSum(nums: IntArray): IntArray {
 private fun main() {
     val nums = intArrayOf(3, 1, 2, 10, 1)
 
-    println(runningSum(nums).joinToString())
+    val result = runningSum(nums)
+    assertContentEquals(result, intArrayOf(3, 4, 6, 16, 17), "runningSum error")
 }

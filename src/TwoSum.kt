@@ -66,5 +66,5 @@ fun main() {
     val target = 11
     val res = twoSum(testArray, target)
 
-    assertContentEquals(intArrayOf(1, 5), res,  "")
+    assertContentEquals(intArrayOf(1, 5), res,  "twoSum error")
 }

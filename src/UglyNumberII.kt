@@ -1,4 +1,5 @@
 import kotlin.math.min
+import kotlin.test.assertEquals
 
 /**
  * Write a program to find the n-th ugly number.
@@ -53,5 +54,7 @@ fun nthUglyNumber(n: Int): Int {
 }
 
 fun main() {
-    println(nthUglyNumber(12))
+    val result = nthUglyNumber(12)
+
+    assertEquals(16, result, "nthUglyNumber error")
 }

@@ -30,7 +30,6 @@
  * Runtime: 136 ms, faster than 98.70% of Kotlin online submissions for Permutation Sequence.
  * Memory Usage: 32.6 MB, less than 68.83% of Kotlin online submissions for Permutation Sequence.
  */
-
 fun getPermutation(n: Int, k: Int): String {
     val factorialArray = IntArray(n - 1) { 1 }
     for (i in 1 until factorialArray.size) {

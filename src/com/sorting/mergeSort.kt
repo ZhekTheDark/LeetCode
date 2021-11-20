@@ -1,4 +1,4 @@
-package sorting
+package com.sorting
 
 /**
  * Merge sort

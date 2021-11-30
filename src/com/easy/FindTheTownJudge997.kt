@@ -71,4 +71,8 @@ fun main() {
     val example1N = 2
     val example1Trust = arrayOf(intArrayOf(1, 2))
     assertEquals(2, findJudge(example1N, example1Trust), "FindTheTownJudge997.kt example 1 error")
+
+    val example2N = 3
+    val example2Trust = arrayOf(intArrayOf(1,3), intArrayOf(2,3))
+    assertEquals(3, findJudge(example2N, example2Trust), "FindTheTownJudge997.kt example 2 error")
 }

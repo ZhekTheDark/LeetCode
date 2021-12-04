@@ -1,5 +1,6 @@
 package com.easy
 
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /**
@@ -40,4 +41,7 @@ fun checkIfPangram(sentence: String): Boolean {
 fun main() {
     val example1Sentence = "thequickbrownfoxjumpsoverthelazydog"
     assertTrue(checkIfPangram(example1Sentence), "CheckIfTheSentenceIsPangram1832 example1 error")
+
+    val example2Sentence = "leetcode"
+    assertFalse(checkIfPangram(example2Sentence), "CheckIfTheSentenceIsPangram1832 example2 error")
 }

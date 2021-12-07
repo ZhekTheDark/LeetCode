@@ -1,5 +1,7 @@
 package com.easy
 
+import kotlin.test.assertEquals
+
 /**
  * Given an array nums of integers, return how many of them contain an even number of digits.
  *
@@ -37,4 +39,9 @@ fun findNumbers(nums: IntArray): Int {
     return nums
         .map { it.toString() }
         .count { it.length % 2 == 0 }
+}
+
+fun main() {
+    val example1Nums = intArrayOf(12, 345, 2, 6, 7896)
+    assertEquals(2, findNumbers(example1Nums), "FindNumbersWithEvenNumberOfDigits1295 example1 error")
 }

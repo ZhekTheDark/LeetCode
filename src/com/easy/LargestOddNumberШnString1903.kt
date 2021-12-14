@@ -27,6 +27,15 @@ import kotlin.test.assertEquals
  * 1 <= num.length <= 105
  * num only consists of digits and does not contain any leading zeros.
  */
+
+/**
+ * Complexity Analysis:
+ * Time complexity : O(n).
+ * Space complexity : O(1).
+ *
+ * Runtime: 236 ms, faster than 52.22% of Kotlin online submissions for Largest Odd Number in String.
+ * Memory Usage: 39.5 MB, less than 74.44% of Kotlin online submissions for Largest Odd Number in String.
+ */
 fun largestOddNumber(num: String): String {
     return num.dropLastWhile { Character.getNumericValue(it) % 2 == 0 }
 }

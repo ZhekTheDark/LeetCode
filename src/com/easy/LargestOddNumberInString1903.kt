@@ -42,5 +42,8 @@ fun largestOddNumber(num: String): String {
 
 fun main() {
     val example1Num = "52"
-    assertEquals("5", largestOddNumber(example1Num), "LargestOddNumberШnString1903 example1 error")
+    assertEquals("5", largestOddNumber(example1Num), "LargestOddNumberInString1903.kt example1 error")
+
+    val example2Num = "4206"
+    assertEquals("", largestOddNumber(example2Num), "LargestOddNumberInString1903.kt example1 error")
 }

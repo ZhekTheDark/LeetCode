@@ -46,4 +46,7 @@ fun main() {
 
     val example2Num = "4206"
     assertEquals("", largestOddNumber(example2Num), "LargestOddNumberInString1903.kt example1 error")
+
+    val example3Num = "35427"
+    assertEquals("35427", largestOddNumber(example3Num), "LargestOddNumberInString1903.kt example3 error")
 }

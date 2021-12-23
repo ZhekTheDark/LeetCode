@@ -3,7 +3,12 @@ package com.easy
 import kotlin.test.assertEquals
 
 fun minimumDifference(nums: IntArray, k: Int): Int {
-    return 0
+    nums.sort()
+    var res = nums[k - 1] - nums[0]
+    for (i in k..nums.lastIndex) {
+        res = minOf(res, nums[i] - nums[i - k + 1])
+    }
+    return res
 }
 
 fun main() {

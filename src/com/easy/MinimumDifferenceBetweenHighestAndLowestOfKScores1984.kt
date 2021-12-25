@@ -30,6 +30,15 @@ import kotlin.test.assertEquals
  * 1 <= k <= nums.length <= 1000
  * 0 <= nums[i] <= 105
  */
+
+/**
+ * Complexity Analysis:
+ * Time complexity : O(n*log(n)).
+ * Space complexity : O(1).
+ *
+ * Runtime: 212 ms, faster than 100.00% of Kotlin online submissions for Minimum Difference Between Highest and Lowest of K Scores.
+ * Memory Usage: 38.3 MB, less than 77.78% of Kotlin online submissions for Minimum Difference Between Highest and Lowest of K Scores.
+ */
 fun minimumDifference(nums: IntArray, k: Int): Int {
     nums.sort()
     var res = nums[k - 1] - nums[0]

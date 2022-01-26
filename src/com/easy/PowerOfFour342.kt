@@ -1,5 +1,9 @@
 package com.easy
 
+import kotlin.math.ceil
+import kotlin.math.floor
+import kotlin.math.log
+
 /**
  * Given an integer n, return true if it is a power of four. Otherwise, return false.
  * An integer n is a power of four, if there exists an integer x such that n == 4x.
@@ -20,5 +24,7 @@ package com.easy
  * -231 <= n <= 231 - 1
  */
 fun isPowerOfFour(n: Int): Boolean {
-    return true
+    val result = log(n.toDouble(), 4.0)
+    val remain = result - floor(result)
+    return remain == 0.0
 }

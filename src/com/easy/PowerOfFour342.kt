@@ -1,8 +1,8 @@
 package com.easy
 
-import kotlin.math.ceil
 import kotlin.math.floor
 import kotlin.math.log
+import kotlin.test.assertTrue
 
 /**
  * Given an integer n, return true if it is a power of four. Otherwise, return false.
@@ -27,4 +27,9 @@ fun isPowerOfFour(n: Int): Boolean {
     val result = log(n.toDouble(), 4.0)
     val remain = result - floor(result)
     return remain == 0.0
+}
+
+fun main() {
+    val example1 = 16
+    assertTrue(isPowerOfFour(example1))
 }

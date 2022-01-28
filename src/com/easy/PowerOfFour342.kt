@@ -2,6 +2,7 @@ package com.easy
 
 import kotlin.math.floor
 import kotlin.math.log
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /**
@@ -32,4 +33,7 @@ fun isPowerOfFour(n: Int): Boolean {
 fun main() {
     val example1 = 16
     assertTrue(isPowerOfFour(example1))
+
+    val example2 = 5
+    assertFalse(isPowerOfFour(example2))
 }

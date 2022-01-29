@@ -36,4 +36,7 @@ fun main() {
 
     val example2 = 5
     assertFalse(isPowerOfFour(example2))
+
+    val example3 = 1
+    assertTrue(isPowerOfFour(example3))
 }

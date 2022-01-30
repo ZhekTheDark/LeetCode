@@ -24,6 +24,14 @@ import kotlin.test.assertTrue
  * Constraints:
  * -231 <= n <= 231 - 1
  */
+
+/**
+ * Complexity Analysis:
+ * Time complexity : O(log(n)).
+ * Space complexity : O(1).
+ * Runtime: 140 ms, faster than 68.63% of Kotlin online submissions for Power of Four.
+ * Memory Usage: 33.4 MB, less than 78.43% of Kotlin online submissions for Power of Four.
+ */
 fun isPowerOfFour(n: Int): Boolean {
     val result = log(n.toDouble(), 4.0)
     val remain = result - floor(result)

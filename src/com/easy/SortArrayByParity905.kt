@@ -20,7 +20,18 @@ import kotlin.test.assertEquals
  * 0 <= nums[i] <= 5000
  */
 fun sortArrayByParity(nums: IntArray): IntArray {
-    return intArrayOf()
+    val oddInts = mutableListOf<Int>()
+    val evenInts = mutableListOf<Int>()
+
+    for (num in nums) {
+        if (num % 2 == 0) {
+            evenInts += num
+        } else {
+            oddInts += num
+        }
+    }
+
+    return (evenInts + oddInts).toIntArray()
 }
 
 fun main() {

@@ -19,6 +19,15 @@ import kotlin.test.assertEquals
  * 1 <= nums.length <= 5000
  * 0 <= nums[i] <= 5000
  */
+
+/**
+ * Complexity Analysis:
+ * Time complexity : O(n).
+ * Space complexity : O(n).
+ *
+ * Runtime: 236 ms, faster than 80.18% of Kotlin online submissions for Sort Array By Parity.
+ * Memory Usage: 37 MB, less than 99.10% of Kotlin online submissions for Sort Array By Parity.
+ */
 fun sortArrayByParity(nums: IntArray): IntArray {
     val oddInts = mutableListOf<Int>()
     val evenInts = mutableListOf<Int>()

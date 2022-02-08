@@ -1,5 +1,8 @@
 package com.easy
 
+import kotlin.test.assertEquals
+import kotlin.test.assertTrue
+
 /**
  * Given an integer x, return true if x is palindrome integer.
  * An integer is a palindrome when it reads the same backward as forward.
@@ -24,9 +27,10 @@ package com.easy
  * -2^31 <= x <= 2^31 - 1
  */
 fun isPalindrome(x: Int): Boolean {
-
+    return false
 }
 
 fun main() {
-
+    val example1x = 121
+    assertTrue(isPalindrome(example1x), "PalindromeNumber9 example1 error")
 }

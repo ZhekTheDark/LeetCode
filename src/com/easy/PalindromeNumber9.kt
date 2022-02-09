@@ -1,6 +1,7 @@
 package com.easy
 
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /**
@@ -33,4 +34,7 @@ fun isPalindrome(x: Int): Boolean {
 fun main() {
     val example1x = 121
     assertTrue(isPalindrome(example1x), "PalindromeNumber9 example1 error")
+
+    val example2x = -121
+    assertFalse(isPalindrome(example2x), "PalindromeNumber9 example2 error")
 }

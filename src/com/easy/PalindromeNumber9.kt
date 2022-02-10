@@ -37,4 +37,7 @@ fun main() {
 
     val example2x = -121
     assertFalse(isPalindrome(example2x), "PalindromeNumber9 example2 error")
+
+    val example3x = 10
+    assertFalse(isPalindrome(example3x), "PalindromeNumber9 example3 error")
 }

@@ -1,6 +1,5 @@
 package com.easy
 
-import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
@@ -28,7 +27,12 @@ import kotlin.test.assertTrue
  * -2^31 <= x <= 2^31 - 1
  */
 fun isPalindrome(x: Int): Boolean {
-    return false
+    val s = x.toString()
+
+    for(i in 0..(s.length / 2))
+        if(s[i] != s[s.length - 1 - i]) return false
+
+    return true
 }
 
 fun main() {

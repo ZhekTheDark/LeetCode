@@ -26,6 +26,15 @@ import kotlin.test.assertTrue
  * Constraints:
  * -2^31 <= x <= 2^31 - 1
  */
+
+/**
+ * Complexity Analysis:
+ * Time complexity : O(n).
+ * Space complexity : O(1).
+ *
+ * Runtime: 204 ms, faster than 92.09% of Kotlin online submissions for Palindrome Number.
+ * Memory Usage: 35.8 MB, less than 80.73% of Kotlin online submissions for Palindrome Number.
+ */
 fun isPalindrome(x: Int): Boolean {
     val s = x.toString()
 

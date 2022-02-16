@@ -1,5 +1,7 @@
 package com.easy
 
+import kotlin.test.assertTrue
+
 /**
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
  *
@@ -25,4 +27,10 @@ package com.easy
  */
 fun isValid(s: String): Boolean {
     return false
+}
+
+fun main() {
+    val example1Sentence = "()"
+    assertTrue(isValid(example1Sentence), "ValidParentheses20 example1 error")
+
 }

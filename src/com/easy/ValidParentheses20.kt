@@ -33,4 +33,7 @@ fun main() {
     val example1Sentence = "()"
     assertTrue(isValid(example1Sentence), "ValidParentheses20 example1 error")
 
+    val example2Sentence = "()[]{}"
+    assertTrue(isValid(example2Sentence), "ValidParentheses20 example2 error")
+
 }

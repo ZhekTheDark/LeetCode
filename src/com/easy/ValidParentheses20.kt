@@ -1,5 +1,6 @@
 package com.easy
 
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /**
@@ -35,5 +36,8 @@ fun main() {
 
     val example2Sentence = "()[]{}"
     assertTrue(isValid(example2Sentence), "ValidParentheses20 example2 error")
+
+    val example3Sentence = "(]"
+    assertFalse(isValid(example3Sentence), "ValidParentheses20 example3 error")
 
 }

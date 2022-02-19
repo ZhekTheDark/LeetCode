@@ -39,5 +39,4 @@ fun main() {
 
     val example3Sentence = "(]"
     assertFalse(isValid(example3Sentence), "ValidParentheses20 example3 error")
-
 }

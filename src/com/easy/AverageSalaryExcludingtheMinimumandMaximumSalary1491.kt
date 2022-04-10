@@ -40,6 +40,7 @@ fun averageSalaryExcludingtheMinimumandMaximumSalary1491(salary: IntArray): Doub
 fun main() {
     val salary1 = intArrayOf(4000, 3000, 1000, 2000)
     assertEquals(2500.0, averageSalaryExcludingtheMinimumandMaximumSalary1491(salary1), "example1 error")
+
     val salary2 = intArrayOf(1000, 2000, 3000)
     assertEquals(2000.0, averageSalaryExcludingtheMinimumandMaximumSalary1491(salary2), "example2 error")
     val salary3 = intArrayOf(6000, 5000, 4000, 3000, 2000, 1000)

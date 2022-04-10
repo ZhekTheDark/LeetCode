@@ -43,8 +43,10 @@ fun main() {
 
     val salary2 = intArrayOf(1000, 2000, 3000)
     assertEquals(2000.0, averageSalaryExcludingtheMinimumandMaximumSalary1491(salary2), "example2 error")
+
     val salary3 = intArrayOf(6000, 5000, 4000, 3000, 2000, 1000)
     assertEquals(3500.0, averageSalaryExcludingtheMinimumandMaximumSalary1491(salary3), "example3 error")
+
     val salary4 = intArrayOf(8000, 9000, 2000, 3000, 6000, 1000)
     assertEquals(4750.0, averageSalaryExcludingtheMinimumandMaximumSalary1491(salary4), "example4 error")
 }

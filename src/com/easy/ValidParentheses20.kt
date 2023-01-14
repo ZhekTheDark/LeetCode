@@ -1,5 +1,6 @@
 package com.easy
 
+import java.util.Stack
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
@@ -27,7 +28,35 @@ import kotlin.test.assertTrue
  * s consists of parentheses only '()[]{}'.
  */
 fun isValid(s: String): Boolean {
-    return false
+    val stack = Stack<String>()
+
+    s.forEach { c: Char ->
+        stack.popOrPush(c.toString())
+    }
+
+    return stack.isEmpty()
+}
+
+private fun <String> Stack<String>.popOrPush(str: String): Unit {
+    if (isEmpty()) {
+        push(str)
+    } else {
+        val peek: String = peek()
+        if (peek.isOpposite(str)) {
+            pop()
+        } else {
+            push(str)
+        }
+    }
+}
+
+private fun <String> String.isOpposite(str: String): Boolean {
+    return when (this) {
+        "(" -> str == ")"
+        "[" -> str == "]"
+        "{" -> str == "}"
+        else -> throw IllegalArgumentException("illegal char: $this")
+    }
 }
 
 fun main() {

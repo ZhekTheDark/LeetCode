@@ -1,6 +1,6 @@
 package com.easy
 
-import java.util.Stack
+import java.util.*
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
@@ -27,8 +27,31 @@ import kotlin.test.assertTrue
  * 1 <= s.length <= 10^4
  * s consists of parentheses only '()[]{}'.
  */
+
+//fun isValid(s: String): Boolean {
+//    val stack = ArrayDeque<Char>()
+//    s.forEach {
+//        when(it) {
+//            '(', '[', '{' -> stack.push(it)
+//            ')' -> if (stack.poll() != '(') return false
+//            '}' -> if (stack.poll() != '{') return false
+//            ']' -> if (stack.poll() != '[') return false
+//        }
+//    }
+//    return stack.isEmpty()
+//}
+
+/**
+ * Complexity Analysis:
+ * Time complexity : O(n).
+ * Space complexity : O(n).
+ *
+ * Runtime: 155 ms, faster than 83.41% of Kotlin online submissions.
+ * Memory Usage: 34.9 MB, less than 43.81% of Kotlin online submissions.
+ */
 fun isValid(s: String): Boolean {
     val stack = Stack<String>()
+    ArrayDeque<Char>()
 
     s.forEach { c: Char ->
         stack.popOrPush(c.toString())
@@ -37,7 +60,7 @@ fun isValid(s: String): Boolean {
     return stack.isEmpty()
 }
 
-private fun <String> Stack<String>.popOrPush(str: String): Unit {
+private fun <String> Stack<String>.popOrPush(str: String) {
     if (isEmpty()) {
         push(str)
     } else {
@@ -55,6 +78,7 @@ private fun <String> String.isOpposite(str: String): Boolean {
         "(" -> str == ")"
         "[" -> str == "]"
         "{" -> str == "}"
+        ")", "]", "}" -> false
         else -> throw IllegalArgumentException("illegal char: $this")
     }
 }

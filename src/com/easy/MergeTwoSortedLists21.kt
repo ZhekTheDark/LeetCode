@@ -7,3 +7,7 @@ class ListNode(var `val`: Int) {
 fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
 
 }
+
+fun main() {
+
+}

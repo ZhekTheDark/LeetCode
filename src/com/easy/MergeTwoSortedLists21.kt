@@ -34,7 +34,7 @@ fun main() {
     val expectedListNode3 = ListNode(2).apply { next = expectedListNode4 }
     val expectedListNode2 = ListNode(1).apply { next = expectedListNode3 }
     val expectedListNode1 = ListNode(1).apply { next = expectedListNode2 }
-    val actualListNode = mergeTwoLists(node11, node12)
+    val actualListNode = mergeTwoLists(node11, node21)
     assertEquals(expectedListNode1, actualListNode)
 }
 

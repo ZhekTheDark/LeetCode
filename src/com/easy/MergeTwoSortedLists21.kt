@@ -6,17 +6,22 @@ import kotlin.test.assertEquals
 class ListNode(var `val`: Int) {
     var next: ListNode? = null
 }
-//private fun getMinListNode(list1: ListNode?, list2: ListNode?): ListNode? {
-//    return if ((list1?.`val` ?: Int.MAX_VALUE) <= (list2?.`val` ?: Int.MAX_VALUE)) {
-//        list1
-//    } else {
-//        list2
-//    }
-//}
+
+private fun getMinListNode(list1: ListNode?, list2: ListNode?): ListNode? {
+    return if ((list1?.`val` ?: Int.MAX_VALUE) <= (list2?.`val` ?: Int.MAX_VALUE)) {
+        list1
+    } else {
+        list2
+    }
+}
 
 fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
     val head = getMinListNode(list1, list2)
+    var node = getMinListNode(list1, list2)
 
+    while (list1!=null && list2!=null) {
+
+    }
 }
 
 fun main() {
@@ -34,6 +39,7 @@ fun main() {
     val expectedListNode3 = ListNode(2).apply { next = expectedListNode4 }
     val expectedListNode2 = ListNode(1).apply { next = expectedListNode3 }
     val expectedListNode1 = ListNode(1).apply { next = expectedListNode2 }
+
     val actualListNode = mergeTwoLists(node11, node21)
     assertEquals(expectedListNode1, actualListNode)
 }

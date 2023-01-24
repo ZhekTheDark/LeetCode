@@ -1,27 +1,28 @@
 package com.easy
 
-import kotlin.math.min
 import kotlin.test.assertEquals
 
 class ListNode(var `val`: Int) {
     var next: ListNode? = null
 }
 
-private fun getMinListNode(list1: ListNode?, list2: ListNode?): ListNode? {
+private fun getMinListNodeValue(list1: ListNode?, list2: ListNode?): Int? {
     return if ((list1?.`val` ?: Int.MAX_VALUE) <= (list2?.`val` ?: Int.MAX_VALUE)) {
-        list1
+        list1?.`val`
     } else {
-        list2
+        list2?.`val`
     }
 }
 
 fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
-    val head = getMinListNode(list1, list2)
-    var node = getMinListNode(list1, list2)
+    val head = getMinListNodeValue(list1, list2)?.let { ListNode(it) }
+    var node = getMinListNodeValue(list1, list2)
 
     while (list1!=null && list2!=null) {
-
+        var nextNode = getMinListNodeValue(list1, list2)
     }
+
+    return head
 }
 
 fun main() {

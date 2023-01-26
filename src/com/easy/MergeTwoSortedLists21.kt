@@ -59,3 +59,7 @@ fun assertEquals(expected: ListNode, actual: ListNode): Boolean {
 
     return true
 }
+
+fun List<Int>.toListNode(): ListNode {
+
+}

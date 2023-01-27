@@ -61,5 +61,29 @@ fun assertEquals(expected: ListNode, actual: ListNode): Boolean {
 }
 
 fun List<Int>.toListNode(): ListNode {
+    var prev: ListNode? = null
+    val node =
+    val head = ListNode(this.first())
+    this.forEach {
+        var node = ListNode(it)
+        if (prev != null) {
+            prev!!.next = node
+        } else {
 
+        }
+        prev = node
+    }
+
+}
+
+fun List<Int>.toListNode(): ListNode? {
+    if (this.size == 1) {
+        return ListNode(this.first())
+    }
+    for (i in 1..this.size)
+    val head = ListNode(this.first())
+
+
+
+    return head
 }

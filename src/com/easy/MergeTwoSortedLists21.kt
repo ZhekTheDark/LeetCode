@@ -62,28 +62,39 @@ fun assertEquals(expected: ListNode, actual: ListNode): Boolean {
 
 fun List<Int>.toListNode(): ListNode {
     var prev: ListNode? = null
-    val node =
-    val head = ListNode(this.first())
+//    val node =
+    var head: ListNode? = null
+//    = ListNode(this.first())
     this.forEach {
-        var node = ListNode(it)
+        val node = ListNode(it)
+        if(head == null) {
+            head = node
+        }
         if (prev != null) {
             prev!!.next = node
-        } else {
-
         }
         prev = node
     }
 
+    return head!!
 }
 
-fun List<Int>.toListNode(): ListNode? {
-    if (this.size == 1) {
-        return ListNode(this.first())
-    }
-    for (i in 1..this.size)
-    val head = ListNode(this.first())
+//fun List<Int>.toListNode(): ListNode? {
+//    if (this.size == 1) {
+//        return ListNode(this.first())
+//    }
+//    for (i in 1..this.size)
+//    val head = ListNode(this.first())
+//
+//
+//
+//    return head
+//}
 
-
-
-    return head
+fun ListNode.joinToString(delimiter: String = " ", start: String = "(", end: String = ")") {
+    print(start)
+    do {
+        print("${this.`val`}$delimiter")
+    } while (this.next != null)
+    print(end)
 }

@@ -37,8 +37,8 @@ package com.easy
  * Time complexity : O(n * m).
  * Space complexity : O(1).
  *
- * Runtime: 200 ms, faster than 57.73% of Kotlin online submissions for Kth Missing Positive Number.
- * Memory Usage: 36.8 MB, less than 84.84% of Kotlin online submissions for Kth Missing Positive Number.
+ * Runtime: 200 ms, faster than 57.73% of Kotlin online submissions for Richest Customer Wealth.
+ * Memory Usage: 36.8 MB, less than 84.84% of Kotlin online submissions for Richest Customer Wealth.
  */
 fun maximumWealth(accounts: Array<IntArray>): Int {
     return accounts.map { money ->

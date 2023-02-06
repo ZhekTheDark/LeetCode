@@ -50,22 +50,46 @@ public class DuplicateZeros1089 {
 
 //    1,0,2,3,0,0,4,5
 //    1,0,0,2,3,0,0,0
-    public void duplicateZeros(int[] arr) {
-        int left = 0;
-        int right = arr.length - 1;
 
-        while (left <= right) {
-            if (arr[left] == 0) {
-                if (left == right) {
-                    right--;
+//    1,0,2,3,0,4,5,6
+//    1,0,0,2,3,0,0,4
+
+//    0,0,0,0,0,0,0
+    public void duplicateZeros(int[] arr) {
+        int rightBorder = arr.length - 1;
+//        int last = arr.length - 1;
+
+        int i = 0;
+        while (i <= rightBorder) {
+            if (arr[i] == 0) {
+                if (i == rightBorder) {
+                    rightBorder--;
                     arr[arr.length - 1] = 0;
+//                    last = arr.length - 2;
+                    break;
                 }
-                right--;
-                left++;
+                rightBorder--;
             }
-            left++;
+            i++;
         }
 
-
+        while (rightBorder >= 0) {
+            if (arr[rightBorder] == 0) {
+                arr[last] = 0;
+                last--;
+                if (last != 0) {
+                    arr[last] = 0;
+                }
+            } else {
+                arr[last] = arr[rightBorder];
+            }
+            rightBorder--;
+            last--;
+        }
     }
+
+//    public void duplicateZeros(int[] arr) {
+//        int zeros = 0;
+//
+//    }
 }

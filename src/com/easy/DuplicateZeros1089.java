@@ -1,5 +1,7 @@
 package com.easy;
 
+import kotlin.test.AssertionsKt;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,16 +50,17 @@ public class DuplicateZeros1089 {
         }
     }
 
-//    1,0,2,3,0,0,4,5
-//    1,0,0,2,3,0,0,0
-
-//    1,0,2,3,0,4,5,6
-//    1,0,0,2,3,0,0,4
-
-//    0,0,0,0,0,0,0
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n).
+     * Space complexity : O(1).
+     * <p>
+     * Runtime: 0 ms, faster than 100% of Java online submissions for Squares of a Duplicate Zeros.
+     * Memory Usage: 42.2 MB, less than 89.67% of Java online submissions for Squares of a Duplicate Zeros.
+     */
     public void duplicateZeros(int[] arr) {
         int rightBorder = arr.length - 1;
-//        int last = arr.length - 1;
+        int startInsIndex = arr.length - 1;
 
         int i = 0;
         while (i <= rightBorder) {
@@ -65,7 +68,7 @@ public class DuplicateZeros1089 {
                 if (i == rightBorder) {
                     rightBorder--;
                     arr[arr.length - 1] = 0;
-//                    last = arr.length - 2;
+                    startInsIndex = arr.length - 2;
                     break;
                 }
                 rightBorder--;
@@ -75,21 +78,21 @@ public class DuplicateZeros1089 {
 
         while (rightBorder >= 0) {
             if (arr[rightBorder] == 0) {
-                arr[last] = 0;
-                last--;
-                if (last != 0) {
-                    arr[last] = 0;
-                }
+                arr[startInsIndex] = 0;
+                startInsIndex--;
+                arr[startInsIndex] = 0;
             } else {
-                arr[last] = arr[rightBorder];
+                arr[startInsIndex] = arr[rightBorder];
             }
             rightBorder--;
-            last--;
+            startInsIndex--;
         }
     }
 
-//    public void duplicateZeros(int[] arr) {
-//        int zeros = 0;
-//
-//    }
+    public static void main(String[] args) {
+        int[] actual = {1, 0, 2, 3, 0, 0, 4, 5};
+        int[] expected = {1, 0, 0, 2, 3, 0, 0, 0};
+        new DuplicateZeros1089().duplicateZeros(actual);
+        AssertionsKt.assertContentEquals(actual, expected, "DuplicateZeros1089 test1 failed");
+    }
 }

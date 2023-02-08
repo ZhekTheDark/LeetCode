@@ -1,5 +1,8 @@
 package com.easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
  * Each letter in magazine can only be used once in ransomNote.
@@ -30,8 +33,7 @@ public class RansomNote383 {
      * Runtime: 12 ms, faster than 59.40% of Java online submissions for Ransom Note.
      * Memory Usage: 42.7 MB, less than 67.45% of Java online submissions for Ransom Note.
      */
-    /*
-    public boolean canConstruct(String ransomNote, String magazine) {
+    public boolean canConstructSlow(String ransomNote, String magazine) {
         Map<Character, Integer> letters = new HashMap<>();
 
         for (char c : magazine.toCharArray()) {
@@ -54,7 +56,7 @@ public class RansomNote383 {
 
         return true;
     }
-    */
+
 
     /**
      * Complexity Analysis:

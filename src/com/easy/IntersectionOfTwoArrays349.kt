@@ -3,7 +3,6 @@ package com.easy
 import kotlin.test.assertContentEquals
 
 /**
- *
  * Given two integer arrays nums1 and nums2, return an array of their intersection.
  * Each element in the result must be unique and you may return the result in any order.
  *
@@ -31,18 +30,8 @@ import kotlin.test.assertContentEquals
  * Memory Usage: 37.5 MB, less than 55.00% of Kotlin online submissions for Intersection of Two Arrays.
  */
 fun intersection(nums1: IntArray, nums2: IntArray): IntArray {
-//    val set1 = nums1.toSet()
-//    val set2 = nums2.toSet()
-//    val result = mutableSetOf<Int>()
-//
-//    set1.forEach { element ->
-//        if (set2.contains(element)) result.add(element)
-//    }
-//
-//    return result.toIntArray()
-
     return nums1
-        .filter{ nums2.contains(it) }
+        .filter { nums2.contains(it) }
         .distinct()
         .toIntArray()
 }
@@ -50,7 +39,6 @@ fun intersection(nums1: IntArray, nums2: IntArray): IntArray {
 fun main() {
     val nums1Example1 = intArrayOf(1, 2, 2, 1)
     val nums2Example1 = intArrayOf(2, 2)
-    val resultExample1 = intArrayOf( 2)
+    val resultExample1 = intArrayOf(2)
     assertContentEquals(resultExample1, intersection(nums1Example1, nums2Example1), "intersection example1 error")
-
 }

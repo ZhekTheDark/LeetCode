@@ -28,8 +28,8 @@ public class SquaresOfASortedArray977 {
      * Time complexity : O(n).
      * Space complexity : O(1).
      * <p>
-     * Runtime: 1 ms, faster than 100% of Java online submissions for Squares of a Squares of a Sorted Array.
-     * Memory Usage: 43.5 MB, less than 96.99% of Java online submissions for Squares of a Squares of a Sorted Array.
+     * Runtime: 1 ms, faster than 100% of Java online submissions for Squares of a Sorted Array.
+     * Memory Usage: 43.5 MB, less than 96.99% of Java online submissions for Squares of a Sorted Array.
      */
     public int[] sortedSquares(int[] nums) {
         int[] result = new int[nums.length];

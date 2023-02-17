@@ -30,8 +30,8 @@ public class DuplicateZeros1089 {
      * Time complexity : O(n).
      * Space complexity : O(n).
      * <p>
-     * Runtime: 2 ms, faster than 70.8% of Java online submissions for Squares of a Duplicate Zeros.
-     * Memory Usage: 43 MB, less than 37.6% of Java online submissions for Squares of a Duplicate Zeros.
+     * Runtime: 2 ms, faster than 70.8% of Java online submissions for Duplicate Zeros.
+     * Memory Usage: 43 MB, less than 37.6% of Java online submissions for Duplicate Zeros.
      */
     public void duplicateZerosExtraSpace(int[] arr) {
         List<Integer> res = new ArrayList<>();
@@ -55,8 +55,8 @@ public class DuplicateZeros1089 {
      * Time complexity : O(n).
      * Space complexity : O(1).
      * <p>
-     * Runtime: 0 ms, faster than 100% of Java online submissions for Squares of a Duplicate Zeros.
-     * Memory Usage: 42.2 MB, less than 89.67% of Java online submissions for Squares of a Duplicate Zeros.
+     * Runtime: 0 ms, faster than 100% of Java online submissions for Duplicate Zeros.
+     * Memory Usage: 42.2 MB, less than 89.67% of Java online submissions Duplicate Zeros.
      */
     public void duplicateZeros(int[] arr) {
         int rightBorder = arr.length - 1;

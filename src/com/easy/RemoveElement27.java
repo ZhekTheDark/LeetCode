@@ -51,8 +51,8 @@ public class RemoveElement27 {
      * Time complexity : O(n).
      * Space complexity : O(1).
      * <p>
-     * Runtime: 0 ms, faster than 100% of Java online submissions for Squares of a Remove Element.
-     * Memory Usage: 40.4 MB, less than 97.13% of Java online submissions for Squares of a Remove Element.
+     * Runtime: 0 ms, faster than 100% of Java online submissions for Remove Element.
+     * Memory Usage: 40.4 MB, less than 97.13% of Java online submissions for Remove Element.
      */
     public int removeElement(int[] nums, int val) {
         int step = 0;

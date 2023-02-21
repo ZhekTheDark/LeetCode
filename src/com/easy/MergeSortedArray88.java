@@ -43,8 +43,8 @@ public class MergeSortedArray88 {
      * Time complexity : O(m + n).
      * Space complexity : O(1).
      * <p>
-     * Runtime: 0 ms, faster than 100% of Java online submissions for Squares of a Merge Sorted Array.
-     * Memory Usage: 42.3 MB, less than 55.5% of Java online submissions for Squares of a Merge Sorted Array.
+     * Runtime: 0 ms, faster than 100% of Java online submissions for Merge Sorted Array.
+     * Memory Usage: 42.3 MB, less than 55.5% of Java online submissions for Merge Sorted Array.
      */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int last = nums1.length;

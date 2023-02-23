@@ -47,8 +47,8 @@ public class RemoveDuplicatesFromSortedArray26 {
      * Time complexity : O(n).
      * Space complexity : O(1).
      * <p>
-     * Runtime: 1 ms, faster than 100% of Java online submissions for Squares of a Remove Duplicates from Sorted Array.
-     * Memory Usage: 43.6 MB, less than 90.88% of Java online submissions for Squares of a Remove Duplicates from Sorted Array.
+     * Runtime: 1 ms, faster than 100% of Java online submissions for Remove Duplicates from Sorted Array.
+     * Memory Usage: 43.6 MB, less than 90.88% of Java online submissions for Remove Duplicates from Sorted Array.
      */
     public int removeDuplicates(int[] nums) {
         int uniques = 0;

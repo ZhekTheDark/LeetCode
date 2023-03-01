@@ -1,5 +1,7 @@
 package com.easy;
 
+import javafx.util.Pair;
+
 /**
  * Given an integer array nums, return the third distinct maximum number in this array. If the third maximum does not exist, return the maximum number.
  *
@@ -35,9 +37,42 @@ package com.easy;
  */
 public class ThirdMaximumNumber414 {
 
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n).
+     * Space complexity : O(1).
+     * <p>
+     * Runtime: 9 ms, faster than 15.60% of Java online submissions for Third Maximum Number.
+     * Memory Usage: 41.9 MB, less than 84.18% of Java online submissions for Third Maximum Number.
+     */
     public int thirdMax(int[] nums) {
+        Pair<Integer, Boolean> firstMax = new Pair<>(-1, false);
+        Pair<Integer, Boolean> secondMax = new Pair<>(-1, false);
+        Pair<Integer, Boolean> thirdMax = new Pair<>(-1, false);
 
+        for (int num : nums) {
+            if ((firstMax.getValue() && firstMax.getKey() == num) ||
+                    (secondMax.getValue() && secondMax.getKey() == num) ||
+                    (thirdMax.getValue() && thirdMax.getKey() == num)) {
+                continue;
+            }
 
-        return 0;
+            if (!firstMax.getValue() || firstMax.getKey() <= num) {
+                thirdMax = secondMax;
+                secondMax = firstMax;
+                firstMax = new Pair<>(num, true);
+            } else if (!secondMax.getValue() || secondMax.getKey() <= num) {
+                thirdMax = secondMax;
+                secondMax = new Pair<>(num, true);
+            } else if (!thirdMax.getValue() || thirdMax.getKey() <= num) {
+                thirdMax = new Pair<>(num, true);
+            }
+        }
+
+        if (!thirdMax.getValue()) {
+            return firstMax.getKey();
+        }
+
+        return thirdMax.getKey();
     }
 }

@@ -40,7 +40,7 @@ public class NumberOfIslands200 {
      * Runtime: 2 ms, faster than 99.95% of Java online submissions for Move Zeroes.
      * Memory Usage: 50.9 MB, less than 51.87% of Java online submissions for Move Zeroes.
      */
-    public int numIslands(char[][] grid) {
+    public int numIslandsDfs(char[][] grid) {
         int rows = grid.length;
         int cols = grid[0].length;
         int count = 0;

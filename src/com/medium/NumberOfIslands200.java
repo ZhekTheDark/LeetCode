@@ -1,5 +1,7 @@
 package com.medium;
 
+import java.util.LinkedList;
+
 /**
  * Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
  * <p>
@@ -72,5 +74,45 @@ public class NumberOfIslands200 {
         if (y + 1 < cols && grid[x][y + 1] == '1') {
             destroyIsland(grid, x, y + 1, rows, cols);
         }
+    }
+
+    public int numIslandsBfs(char[][] grid) {
+        boolean[][] visited = new boolean[grid.length][grid[0].length];
+
+        int count = 0;
+        for (int i = 0 ; i < grid.length ; i ++) {
+            for (int j = 0 ; j < grid[0].length; j++) {
+
+                if (visited[i][j] || grid[i][j] == '0') {
+                    continue;
+                }
+
+                count ++;
+                LinkedList<int[]> queue = new LinkedList<>();
+                queue.addFirst(new int[]{i,j});
+
+                while (!queue.isEmpty()) {
+                    int[] t = queue.removeFirst();
+                    if (!visited[t[0]][t[1]] && grid[t[0]][t[1]] == '1') {
+                        if (t[0] < grid.length -1 ){
+                            queue.addFirst(new int[]{t[0] + 1, t[1]});
+                        }
+                        if (t[1] < grid[0].length -1) {
+                            queue.addFirst(new int[]{t[0], t[1] + 1});
+                        }
+                        if (t[0] > 0) {
+                            queue.addFirst(new int[]{t[0] -1, t[1]});
+                        }
+                        if (t[1] > 0) {
+                            queue.addFirst(new int[]{t[0], t[1] - 1});
+                        }
+                    }
+                    visited[t[0]][t[1]] = true;
+                }
+
+            }
+        }
+
+        return count;
     }
 }

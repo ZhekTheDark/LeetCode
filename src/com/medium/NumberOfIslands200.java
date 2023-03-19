@@ -76,32 +76,40 @@ public class NumberOfIslands200 {
         }
     }
 
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n*m).
+     * Space complexity : O(n*m).
+     * <p>
+     * Runtime: 14 ms, faster than 8.32% of Java online submissions for Move Zeroes.
+     * Memory Usage: 50.1 MB, less than 91.96% of Java online submissions for Move Zeroes.
+     */
     public int numIslandsBfs(char[][] grid) {
         boolean[][] visited = new boolean[grid.length][grid[0].length];
 
         int count = 0;
-        for (int i = 0 ; i < grid.length ; i ++) {
-            for (int j = 0 ; j < grid[0].length; j++) {
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
 
                 if (visited[i][j] || grid[i][j] == '0') {
                     continue;
                 }
 
-                count ++;
+                count++;
                 LinkedList<int[]> queue = new LinkedList<>();
-                queue.addFirst(new int[]{i,j});
+                queue.addFirst(new int[]{i, j});
 
                 while (!queue.isEmpty()) {
                     int[] t = queue.removeFirst();
                     if (!visited[t[0]][t[1]] && grid[t[0]][t[1]] == '1') {
-                        if (t[0] < grid.length -1 ){
+                        if (t[0] < grid.length - 1) {
                             queue.addFirst(new int[]{t[0] + 1, t[1]});
                         }
-                        if (t[1] < grid[0].length -1) {
+                        if (t[1] < grid[0].length - 1) {
                             queue.addFirst(new int[]{t[0], t[1] + 1});
                         }
                         if (t[0] > 0) {
-                            queue.addFirst(new int[]{t[0] -1, t[1]});
+                            queue.addFirst(new int[]{t[0] - 1, t[1]});
                         }
                         if (t[1] > 0) {
                             queue.addFirst(new int[]{t[0], t[1] - 1});

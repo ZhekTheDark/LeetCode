@@ -36,4 +36,9 @@ package com.medium;
  * target and deadends[i] consist of digits only.
  */
 public class OpenTheLock752 {
+
+    public int openLock(String[] deadends, String target) {
+
+        return 0;
+    }
 }

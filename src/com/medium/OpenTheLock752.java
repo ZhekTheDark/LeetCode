@@ -1,5 +1,7 @@
 package com.medium;
 
+import java.util.*;
+
 /**
  * You have a lock in front of you with 4 circular wheels. Each wheel has 10 slots: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'.
  * The wheels can rotate freely and wrap around: for example we can turn '9' to be '0', or '0' to be '9'.
@@ -38,7 +40,54 @@ package com.medium;
 public class OpenTheLock752 {
 
     public int openLock(String[] deadends, String target) {
+        if (target.equals("0000")) {
+            return 0;
+        }
 
-        return 0;
+        Set<String> visited = new HashSet<>(Arrays.asList(deadends));
+
+        if (visited.contains("0000")) {
+            return -1;
+        }
+
+        Queue<String> queue = new LinkedList<>();
+        queue.offer("0000");
+        visited.add("0000");
+
+        int cnt = 0;
+        while (!queue.isEmpty()) {
+            int len = queue.size();
+
+            while (len > 0) {
+                String curr = queue.poll();
+
+                for (int i = 0; i < 4; i++) {
+                    char c = curr.charAt(i);
+
+                    // the - 0 converts the character to an int so math can be performed, once the numbers are added they get converted back to a string! -- clean code inspired by top voted answer
+                    String up = curr.substring(0, i) + (c == '9' ? 0 : c - '0' + 1) + curr.substring(i + 1);
+                    String dwn = curr.substring(0, i) + (c == '0' ? 9 : c - '0' - 1) + curr.substring(i + 1);
+
+                    if (up.equals(target) || dwn.equals(target)) {
+                        return cnt + 1;
+                    }
+
+                    if (!visited.contains(up)) {
+                        queue.offer(up);
+                        visited.add(up);
+                    }
+                    if (!visited.contains(dwn)) {
+                        queue.offer(dwn);
+                        visited.add(dwn);
+                    }
+                }
+
+                len--;
+            }
+
+            cnt++;
+        }
+
+        return -1;
     }
 }

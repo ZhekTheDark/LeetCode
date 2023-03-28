@@ -46,7 +46,7 @@ fun totalMoney(n: Int): Int {
     if (weeks > 0)
         res += (1..weeks)
             .toSet()
-            .map { (it-1) * 7 + 28 }
+            .map { (it - 1) * 7 + 28 }
             .sum()
 
     return res

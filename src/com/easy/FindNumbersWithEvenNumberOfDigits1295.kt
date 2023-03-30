@@ -45,6 +45,6 @@ fun main() {
     val example1Nums = intArrayOf(12, 345, 2, 6, 7896)
     assertEquals(2, findNumbers(example1Nums), "FindNumbersWithEvenNumberOfDigits1295 example1 error")
 
-    val example2Nums = intArrayOf(555,901,482,1771)
+    val example2Nums = intArrayOf(555, 901, 482, 1771)
     assertEquals(1, findNumbers(example2Nums), "FindNumbersWithEvenNumberOfDigits1295 example2 error")
 }

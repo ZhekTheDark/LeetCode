@@ -1,12 +1,11 @@
 package com.medium;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
- *
+ * <p>
  * Implement the MinStack class:
  * MinStack() initializes the stack object.
  * void push(int val) pushes the element val onto the stack.
@@ -14,7 +13,7 @@ import java.util.List;
  * int top() gets the top element of the stack.
  * int getMin() retrieves the minimum element in the stack.
  * You must implement a solution with O(1) time complexity for each function.
- *
+ * <p>
  * Example 1:
  * Input
  * ["MinStack","push","push","push","getMin","pop","top","getMin"]
@@ -30,7 +29,7 @@ import java.util.List;
  * minStack.pop();
  * minStack.top();    // return 0
  * minStack.getMin(); // return -2
- *
+ * <p>
  * Constraints:
  * -23^1 <= val <= 23^1 - 1
  * Methods pop, top and getMin operations will always be called on non-empty stacks.
@@ -38,16 +37,36 @@ import java.util.List;
  */
 public class MinStack155 {
 
+    class Pair {
+
+        Integer first;
+        Integer second;
+
+        public Pair(Integer first, Integer second) {
+            this.first = first;
+            this.second = second;
+        }
+    }
+
     class MinStack {
 
-        List<Integer> stack;
+        List<Pair> stack;
 
         public MinStack() {
-            stack = new ArrayList<>();
+            this.stack = new LinkedList<>();
         }
 
         public void push(int val) {
-            stack.add(val);
+            if (stack.isEmpty()) {
+                stack.add(new Pair(val, val));
+            } else {
+                Pair pair = stack.get(stack.size() - 1);
+                Integer newMin = pair.second;
+                if (pair.second > val) {
+                    newMin = val;
+                }
+                stack.add(new Pair(val, newMin));
+            }
         }
 
         public void pop() {
@@ -55,11 +74,11 @@ public class MinStack155 {
         }
 
         public int top() {
-            return stack.get(stack.size() - 1);
+            return stack.get(stack.size() - 1).first;
         }
 
         public int getMin() {
-            return Collections.min(stack);
+            return stack.get(stack.size() - 1).second;
         }
     }
 }

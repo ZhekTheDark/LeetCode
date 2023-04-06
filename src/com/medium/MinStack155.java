@@ -48,6 +48,14 @@ public class MinStack155 {
         }
     }
 
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(1).
+     * Space complexity : O(n).
+     * <p>
+     * Runtime: 5 ms, faster than 74.45% of Java online submissions for Min Stack.
+     * Memory Usage: 43.9 MB, less than 96.61% of Java online submissions for Min Stack.
+     */
     class MinStack {
 
         List<Pair> stack;

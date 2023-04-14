@@ -38,8 +38,8 @@ import kotlin.test.assertTrue
 fun isPalindrome(x: Int): Boolean {
     val s = x.toString()
 
-    for(i in 0..(s.length / 2))
-        if(s[i] != s[s.length - 1 - i]) return false
+    for (i in 0..(s.length / 2))
+        if (s[i] != s[s.length - 1 - i]) return false
 
     return true
 }

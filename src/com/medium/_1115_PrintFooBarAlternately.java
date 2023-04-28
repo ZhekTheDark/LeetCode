@@ -38,6 +38,14 @@ package com.medium;
  */
 public class _1115_PrintFooBarAlternately {
 
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n).
+     * Space complexity : O(1).
+     * <p>
+     * Runtime: 22 ms, faster than 93.39% of Java online submissions for 1115 Print FooBar Alternately.
+     * Memory Usage: 42.1 MB, less than 94.71% of Java online submissions for 1115 Print FooBar Alternately.
+     */
     class FooBar {
         private int n;
         private volatile int flag = 0;

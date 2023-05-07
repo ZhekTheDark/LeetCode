@@ -34,7 +34,7 @@ import kotlin.test.assertEquals
  */
 fun findKthPositive(arr: IntArray, k: Int): Int {
     var n = k
-    val maxValue  = arr[arr.size - 1]
+    val maxValue = arr[arr.size - 1]
 
     for (i in 1..maxValue) {
         if (!arr.contains(i)) n--
@@ -49,7 +49,7 @@ fun main() {
     val example1K = 5
     assertEquals(9, findKthPositive(example1Arr, example1K), "KthMissingPositiveNumber1539 example1 error")
 
-    val example2Arr = intArrayOf(1,2,3,4)
+    val example2Arr = intArrayOf(1, 2, 3, 4)
     val example2K = 2
     assertEquals(6, findKthPositive(example2Arr, example2K), "KthMissingPositiveNumber1539 example2 error")
 }

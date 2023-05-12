@@ -25,6 +25,14 @@ import java.util.Stack;
  */
 public class _739_DailyTemperatures {
 
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n).
+     * Space complexity : O(n).
+     *
+     * Runtime: 176 ms, faster than 38.73% of Java online submissions for 739 Daily Temperatures.
+     * Memory Usage: 54.7 MB, less than 73.96% of Java online submissions for 739 Daily Temperatures.
+     */
     public int[] dailyTemperatures(int[] temperatures) {
         int n = temperatures.length;
         int[] res = new int[n];

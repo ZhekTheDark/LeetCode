@@ -34,4 +34,10 @@ package com.easy;
  * Follow up: Could you find an O(nums1.length + nums2.length) solution?
  */
 public class _496_NextGreaterElementI {
+
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        int[] res = new int[nums1.length];
+
+        return res;
+    }
 }

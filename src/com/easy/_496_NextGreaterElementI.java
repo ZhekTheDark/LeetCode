@@ -1,5 +1,7 @@
 package com.easy;
 
+import java.util.Stack;
+
 /**
  * The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.
  *
@@ -36,7 +38,9 @@ package com.easy;
 public class _496_NextGreaterElementI {
 
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        int[] res = new int[nums1.length];
+        int n = nums1.length;
+        int[] res = new int[n];
+        Stack<Integer> stack = new Stack<>();
 
         return res;
     }

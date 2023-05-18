@@ -42,6 +42,14 @@ public class _496_NextGreaterElementI {
         int[] res = new int[n];
         Stack<Integer> stack = new Stack<>();
 
+        for () {
+            for () {
+                while () {
+
+                }
+            }
+        }
+
         return res;
     }
 }

@@ -1,5 +1,6 @@
 package com.easy;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 /**
@@ -40,6 +41,7 @@ public class _496_NextGreaterElementI {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[] res = new int[n];
+        Arrays.fill(res, -1);
         Stack<Integer> stack = new Stack<>();
 
         for () {

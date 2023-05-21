@@ -47,7 +47,6 @@ public class _496_NextGreaterElementI {
         for () {
             for () {
                 while () {
-
                 }
             }
         }

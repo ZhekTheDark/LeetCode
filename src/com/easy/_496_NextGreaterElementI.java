@@ -47,7 +47,23 @@ public class _496_NextGreaterElementI {
         for () {
             for () {
                 while () {
+
                 }
+            }
+        }
+
+        return res;
+    }
+
+    public int[] nextGreaterElementSlow(int[] nums1, int[] nums2) {
+        int n = nums1.length;
+        int[] res = new int[n];
+        Arrays.fill(res, -1);
+        Stack<Integer> stack = new Stack<>();
+
+        for () {
+            for () {
+
             }
         }
 

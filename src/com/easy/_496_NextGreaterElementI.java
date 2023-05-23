@@ -59,9 +59,8 @@ public class _496_NextGreaterElementI {
         int n = nums1.length;
         int[] res = new int[n];
         Arrays.fill(res, -1);
-        Stack<Integer> stack = new Stack<>();
 
-        for () {
+        for (int i = 0; i < n; i++) {
             for () {
 
             }

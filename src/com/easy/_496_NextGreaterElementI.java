@@ -55,14 +55,30 @@ public class _496_NextGreaterElementI {
         return res;
     }
 
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n * m).
+     * Space complexity : O(1).
+     * <p>
+     * Runtime: 3 ms, faster than 91.39% of Java online submissions for Next Greater ElementI.
+     * Memory Usage: 43.6 MB, less than 5.18% of Java online submissions for Next Greater ElementI.
+     */
     public int[] nextGreaterElementSlow(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[] res = new int[n];
         Arrays.fill(res, -1);
 
         for (int i = 0; i < n; i++) {
-            for () {
-
+            int j = 0;
+            while (nums2[j] != nums1[i]) {
+                j++;
+            }
+            while (res[i] == -1 &&
+                    j < nums2.length) {
+                if (nums1[i] < nums2[j]) {
+                    res[i] = nums2[j];
+                }
+                j++;
             }
         }
 

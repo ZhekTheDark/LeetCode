@@ -44,7 +44,7 @@ public class _496_NextGreaterElementI {
         Arrays.fill(res, -1);
         Stack<Integer> stack = new Stack<>();
 
-        for () {
+        for (int i = n - 1; i > 0; i--) {
 
         }
 

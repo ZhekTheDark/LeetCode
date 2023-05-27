@@ -46,6 +46,7 @@ public class _496_NextGreaterElementI {
 
         for (int i = n - 1; i > 0; i--) {
 
+            stack.push(nums2[i]);
         }
 
         return res;

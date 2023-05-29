@@ -45,6 +45,9 @@ public class _496_NextGreaterElementI {
         Stack<Integer> stack = new Stack<>();
 
         for (int i = n - 1; i > 0; i--) {
+            if () {
+
+            }
 
             stack.push(nums2[i]);
         }

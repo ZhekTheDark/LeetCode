@@ -1,6 +1,8 @@
 package com.easy;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -38,23 +40,6 @@ import java.util.Stack;
  */
 public class _496_NextGreaterElementI {
 
-    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        int n = nums1.length;
-        int[] res = new int[n];
-        Arrays.fill(res, -1);
-        Stack<Integer> stack = new Stack<>();
-
-        for (int i = n - 1; i > 0; i--) {
-            if () {
-
-            }
-
-            stack.push(nums2[i]);
-        }
-
-        return res;
-    }
-
     /**
      * Complexity Analysis:
      * Time complexity : O(n * m).
@@ -63,7 +48,7 @@ public class _496_NextGreaterElementI {
      * Runtime: 3 ms, faster than 91.39% of Java online submissions for Next Greater ElementI.
      * Memory Usage: 43.6 MB, less than 5.18% of Java online submissions for Next Greater ElementI.
      */
-    public int[] nextGreaterElementSlow(int[] nums1, int[] nums2) {
+    public int[] nextGreaterElementV1(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[] res = new int[n];
         Arrays.fill(res, -1);
@@ -74,7 +59,8 @@ public class _496_NextGreaterElementI {
                 j++;
             }
             while (res[i] == -1 &&
-                    j < nums2.length) {
+                j < nums2.length
+            ) {
                 if (nums1[i] < nums2[j]) {
                     res[i] = nums2[j];
                 }
@@ -83,5 +69,46 @@ public class _496_NextGreaterElementI {
         }
 
         return res;
+    }
+
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n + m).
+     * Space complexity : O(m).
+     * <p>
+     * Runtime: 4 ms, faster than 75.25% of Java online submissions for Next Greater ElementI.
+     * Memory Usage: 43.7 MB, less than 12.9% of Java online submissions for Next Greater ElementI.
+     */
+    public int[] nextGreaterElementV2(int[] nums1, int[] nums2) {
+        Stack<Integer> stack = new Stack<>();
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = nums2.length - 1; i >= 0; i--) {
+            while (!stack.isEmpty() &&
+                stack.peek() < nums2[i]
+            ) {
+                Integer pop = stack.pop();
+                if (stack.isEmpty()) {
+                    map.put(pop, -1);
+                } else {
+                    map.put(pop, stack.peek());
+                }
+            }
+
+            stack.push(nums2[i]);
+        }
+        while (!stack.isEmpty()) {
+            Integer pop = stack.pop();
+            if (stack.isEmpty()) {
+                map.put(pop, -1);
+            } else {
+                map.put(pop, stack.peek());
+            }
+        }
+        for (int i = 0; i < nums1.length; i++) {
+            nums1[i] = map.get(nums1[i]);
+        }
+
+        return nums1;
     }
 }

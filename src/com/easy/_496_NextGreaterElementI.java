@@ -111,4 +111,62 @@ public class _496_NextGreaterElementI {
 
         return nums1;
     }
+
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n + m).
+     * Space complexity : O(m).
+     * <p>
+     * Runtime: 2 ms, faster than 99.39% of Java online submissions for Next Greater ElementI.
+     * Memory Usage: 43.4 MB, less than 15.83% of Java online submissions for Next Greater ElementI.
+     */
+    public int[] nextGreaterElementV3_1(int[] nums1, int[] nums2) {
+        int[] res = new int[nums1.length];
+        int[] stk = new int[nums2.length];
+        Map<Integer, Integer> map = new HashMap<>();
+        int top = -1;
+
+        for(int num : nums2) {
+            while(top >= 0 && stk[top] < num) {
+                map.put(stk[top--], num);
+            }
+            stk[++top] = num;
+        }
+
+        for(int i = 0; i < nums1.length; i++) {
+            res[i] = map.getOrDefault(nums1[i], -1);
+        }
+
+        return res;
+    }
+
+    /**
+     * Complexity Analysis:
+     * Time complexity : O(n + m).
+     * Space complexity : O(m).
+     * <p>
+     * Runtime: 4 ms, faster than 75.25% of Java online submissions for Next Greater ElementI.
+     * Memory Usage: 43.7 MB, less than 12.9% of Java online submissions for Next Greater ElementI.
+     */
+    public int[] nextGreaterElementV3_2(int[] nums1, int[] nums2) {
+        Stack<Integer> stack = new Stack<>();
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int num : nums2) {
+            while (!stack.isEmpty() &&
+                stack.peek() < num
+            ) {
+                Integer pop = stack.pop();
+                map.put(pop, num);
+            }
+
+            stack.push(num);
+        }
+
+        for(int i = 0; i < nums1.length; i++) {
+            nums1[i] = map.getOrDefault(nums1[i], -1);
+        }
+
+        return nums1;
+    }
 }

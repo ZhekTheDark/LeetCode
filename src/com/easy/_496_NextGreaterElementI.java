@@ -126,14 +126,14 @@ public class _496_NextGreaterElementI {
         Map<Integer, Integer> map = new HashMap<>();
         int top = -1;
 
-        for(int num : nums2) {
-            while(top >= 0 && stk[top] < num) {
+        for (int num : nums2) {
+            while (top >= 0 && stk[top] < num) {
                 map.put(stk[top--], num);
             }
             stk[++top] = num;
         }
 
-        for(int i = 0; i < nums1.length; i++) {
+        for (int i = 0; i < nums1.length; i++) {
             res[i] = map.getOrDefault(nums1[i], -1);
         }
 
@@ -163,7 +163,7 @@ public class _496_NextGreaterElementI {
             stack.push(num);
         }
 
-        for(int i = 0; i < nums1.length; i++) {
+        for (int i = 0; i < nums1.length; i++) {
             nums1[i] = map.getOrDefault(nums1[i], -1);
         }
 

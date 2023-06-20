@@ -17,24 +17,24 @@ public class _42_TrappingRainWater {
 
     public static int trap(int[] height) {
         int res = 0;
-//        Stack<Pair> stack = new Stack<>();
-//        Stack<Pair> local = new Stack<>();
-//
-//        for (int i = 0; i < height.length; i++) {
-//            int blockHeight = height[i];
-//            int prev = 0;
-//            while (!stack.isEmpty() && stack.peek().second < blockHeight) {
-//                Pair pop = stack.pop();
-//                local.push(pop);
-//            }
-//            while (!local.isEmpty()) {
-//                Pair pop = local.pop();
-//                int h = Math.min(prev, blockHeight);
-//                res = res + h - pop.second;
-//                height[pop.first] = h;
-//            }
-//            stack.push(new Pair(i, height[i]));
-//        }
+        Stack<Pair> stack = new Stack<>();
+        Stack<Pair> local = new Stack<>();
+
+        for (int i = 0; i < height.length; i++) {
+            int blockHeight = height[i];
+            int prev = 0;
+            while (!stack.isEmpty() && stack.peek().second < blockHeight) {
+                Pair pop = stack.pop();
+                local.push(pop);
+            }
+            while (!local.isEmpty()) {
+                Pair pop = local.pop();
+                int h = Math.min(prev, blockHeight);
+                res = res + h - pop.second;
+                height[pop.first] = h;
+            }
+            stack.push(new Pair(i, height[i]));
+        }
 
         return res;
     }

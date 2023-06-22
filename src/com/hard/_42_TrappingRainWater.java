@@ -16,6 +16,7 @@ public class _42_TrappingRainWater {
     }
 
     public static int trap(int[] height) {
+        if (height == null) return 0;
         int res = 0;
         Stack<Pair> stack = new Stack<>();
         Stack<Pair> local = new Stack<>();

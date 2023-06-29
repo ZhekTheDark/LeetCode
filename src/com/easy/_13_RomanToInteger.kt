@@ -14,7 +14,12 @@ class _13_RomanToInteger {
             'M' to 1000,
         )
         val subtraction = mapOf(
-            1 to 1
+            'V' to 'I',
+            'X' to 'I',
+            'L' to 'X',
+            'C' to 'X',
+            'D' to 'C',
+            'M' to 'C',
         )
 
         for ((index, char) in s.withIndex()) {

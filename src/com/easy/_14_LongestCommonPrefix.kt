@@ -22,7 +22,7 @@ package com.easy
 
 /**
  * Complexity Analysis
- * Time complexity : O(n).
+ * Time complexity : O(n * m).
  * Space complexity : O(1).
  *
  * Runtime: 151 ms, faster than 92.47% of Kotlin online submissions for Remove Duplicates from Sorted List.

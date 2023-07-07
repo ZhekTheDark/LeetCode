@@ -35,3 +35,24 @@ fun longestCommonPrefix(strs: Array<String>): String {
     }
     return w
 }
+
+fun longestCommonPrefixDivideAndConquer(strs: Array<String>): String {
+    if (strs.isEmpty()) return ""
+    return longestCommonPrefixDAC(strs, 0, strs.size - 1)
+}
+
+private fun longestCommonPrefixDAC(strs: Array<String>, l: Int, r: Int): String {
+    if (l == r) return strs[l]
+    val mid = (r + l) / 2
+    val lcpLeft = longestCommonPrefixDAC(strs, l, mid)
+    val lcpRight = longestCommonPrefixDAC(strs, mid + 1, r)
+    return commonPrefix(lcpLeft, lcpRight)
+}
+
+private fun commonPrefix(left: String, right: String): String {
+    left.forEachIndexed { index, c ->
+        if (right.length == index || right[index] != c)
+            return left.substring(0, index)
+    }
+    return left
+}

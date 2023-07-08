@@ -25,8 +25,8 @@ package com.easy
  * Time complexity : O(n * m).
  * Space complexity : O(1).
  *
- * Runtime: 151 ms, faster than 92.47% of Kotlin online submissions for Remove Duplicates from Sorted List.
- * Memory Usage: 34.7 MB, less than 91.16% of Kotlin online submissions for Remove Duplicates from Sorted List.
+ * Runtime: 151 ms, faster than 92.47% of Kotlin online submissions for Longest Common Prefix.
+ * Memory Usage: 34.7 MB, less than 91.16% of Kotlin online submissions for Longest Common Prefix.
  */
 fun longestCommonPrefix(strs: Array<String>): String {
     val w = strs[0]
@@ -36,6 +36,14 @@ fun longestCommonPrefix(strs: Array<String>): String {
     return w
 }
 
+/**
+ * Complexity Analysis
+ * Time complexity : O(n + m).
+ * Space complexity : O(m * log(n)).
+ *
+ * Runtime: 148 ms, faster than 95.41% of Kotlin online submissions for Longest Common Prefix.
+ * Memory Usage: 34 MB, less than 99.89% of Kotlin online submissions for Longest Common Prefix.
+ */
 fun longestCommonPrefixDivideAndConquer(strs: Array<String>): String {
     if (strs.isEmpty()) return ""
     return longestCommonPrefixDAC(strs, 0, strs.size - 1)

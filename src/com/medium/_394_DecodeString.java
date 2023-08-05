@@ -47,8 +47,8 @@ public class _394_DecodeString {
 //    }
 
     public static String decodeString(String s) {
-        Stack<String> substr = new Stack<>();
-        Stack<Integer> repeat = new Stack<>();
+        Stack<String> stringStack = new Stack<>();
+        Stack<Integer> repeatStack = new Stack<>();
         int index = 0;
         StringBuilder res = new StringBuilder();
 
@@ -58,17 +58,17 @@ public class _394_DecodeString {
                 while (Character.isDigit(s.charAt(i))) {
                     i++;
                 }
-                repeat.push(Integer.parseInt(s.substring(index, i)));
+                repeatStack.push(Integer.parseInt(s.substring(index, i)));
                 index = i;
             } else if (s.charAt(index) == '[') {
-                substr.push(res.toString());
+                stringStack.push(res.toString());
                 res = new StringBuilder();
                 index++;
             } else if (s.charAt(index) == ']') {
-                String str = substr.pop();
-                int count = repeat.pop();
+                String str = stringStack.pop();
+                int repeat = repeatStack.pop();
                 StringBuilder temp = new StringBuilder(str);
-                for (int i = 0; i < count; i++) {
+                for (int i = 0; i < repeat; i++) {
                     temp.append(str);
                 }
                 res = new StringBuilder(temp.toString());

@@ -38,7 +38,7 @@ public class _394_DecodeString {
      * Runtime: 1ms Beats 77.28% of users with Java
      * Memory: 40.42mb Beats 84.15% of users with Java
      */
-    public static String decodeStringString(String s) {
+    public static String decodeStringStack(String s) {
         Stack<String> stringStack = new Stack<>();
         Stack<Integer> repeatStack = new Stack<>();
         int index = 0;
@@ -74,8 +74,12 @@ public class _394_DecodeString {
         return res.toString();
     }
 
+    public static String decodeStringRecursive(String s) {
+
+    }
+
     public static void main(String[] args) {
-        System.out.println(decodeStringString("3[a]2[bc]"));  //aaabcbc
-        System.out.println(decodeStringString("3[a2[c]]"));  //accaccacc
+        System.out.println(decodeStringStack("3[a]2[bc]"));  //aaabcbc
+        System.out.println(decodeStringStack("3[a2[c]]"));  //accaccacc
     }
 }

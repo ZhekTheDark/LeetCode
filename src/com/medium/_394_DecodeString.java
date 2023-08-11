@@ -74,12 +74,13 @@ public class _394_DecodeString {
         return res.toString();
     }
 
-    public static String decodeStringRecursive(String s) {
-
-    }
+//    public static String decodeStringRecursive(String s) {
+//
+//    }
 
     public static void main(String[] args) {
         System.out.println(decodeStringStack("3[a]2[bc]"));  //aaabcbc
         System.out.println(decodeStringStack("3[a2[c]]"));  //accaccacc
+        System.out.println(decodeStringStack("2[abc]3[cd]ef"));  //abcabccdcdcdef
     }
 }

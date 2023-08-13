@@ -74,6 +74,10 @@ public class _394_DecodeString {
         return res.toString();
     }
 
+    /**
+     * Runtime: 0-ms Beats 100.00% of users with Java
+     * Memory: 40.66mb Beats 58.57% of users with Java
+     */
     int i = 0;
     public String decodeStringRecursive(String s) {
         StringBuilder sb = new StringBuilder();

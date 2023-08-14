@@ -61,6 +61,10 @@ fun fill(image: Array<IntArray>, x: Int, y: Int, newColor: Int) {
 //    }
 }
 
+fun floodFillStack(image: Array<IntArray>, sr: Int, sc: Int, color: Int): Array<IntArray> {
+
+}
+
 fun main() {
     val exampleImage1 = arrayOf(
         intArrayOf(1, 1, 1),

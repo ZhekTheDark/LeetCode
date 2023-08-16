@@ -1,5 +1,7 @@
 package com.easy
 
+import java.util.*
+
 /**
  * An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
  * You are also given three integers sr, sc, and newColor. You should perform a flood fill on the image starting from the pixel image[sr][sc].
@@ -61,8 +63,28 @@ fun fill(image: Array<IntArray>, x: Int, y: Int, newColor: Int) {
 //    }
 }
 
+/**
+ * Runtime : 199ms Beats 100.00% of users with Kotlin
+ * Memory : 38.39mb Beats 72.17% of users with Kotlin
+ */
 fun floodFillStack(image: Array<IntArray>, sr: Int, sc: Int, color: Int): Array<IntArray> {
+    val visited = mutableMapOf<Pair<Int, Int>, Boolean>()
+    val stack = Stack<Pair<Int, Int>>()
 
+    stack.push(Pair(sr, sc))
+    while (stack.isNotEmpty()) {
+        val (x, y) = stack.pop()
+        if (color != image[x][y] && !visited.getOrDefault(x to y, false)) {
+            visited[x to y] = true
+            if (x - 1 in image.indices && image[x - 1][y] == image[x][y]) stack.add(Pair(x - 1, y))
+            if (y - 1 in image[x].indices && image[x][y - 1] == image[x][y]) stack.add(Pair(x, y - 1))
+            if (y + 1 in image[x].indices && image[x][y + 1] == image[x][y]) stack.add(Pair(x, y + 1))
+            if (x + 1 in image.indices && image[x + 1][y] == image[x][y]) stack.add(Pair(x + 1, y))
+            image[x][y] = color
+        }
+    }
+
+    return image
 }
 
 fun main() {
@@ -79,6 +101,6 @@ fun main() {
 
     println(exampleImage1.forEach { line -> line.forEach { element -> print("$element ") }; println() })
     println(resultImage1.forEach { line -> line.forEach { element -> print("$element ") }; println() })
-    val res1 = floodFill(exampleImage1, 1, 1, 2)
+    val res1 = floodFillStack(exampleImage1, 1, 1, 2)
     println(res1.forEach { line -> line.forEach { element -> print("$element ") }; println() })
 }

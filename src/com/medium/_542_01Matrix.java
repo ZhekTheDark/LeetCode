@@ -5,6 +5,10 @@ import java.util.Queue;
 
 public class _542_01Matrix {
 
+    /**
+     * Runtime: 13ms Beats 82.81% of users with Java
+     * Memory: 44.85MB Beats 99.08% of users with Java
+     */
     public static int[][] updateMatrix(int[][] mat) {
         Queue<int[]> queue = new LinkedList<>();
         for (int x = 0; x < mat.length; x++) {

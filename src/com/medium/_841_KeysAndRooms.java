@@ -4,6 +4,10 @@ import java.util.*;
 
 public class _841_KeysAndRooms {
 
+    /**
+     * Runtime: 2ms Beats 56.59% of users with Java
+     * Memory: 43.07MB Beats 76.81% of users with Java
+     */
     public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
         Set<Integer> visitedRooms = new HashSet<>();
         Queue<Integer> roomsToOpen = new LinkedList<>(rooms.get(0));

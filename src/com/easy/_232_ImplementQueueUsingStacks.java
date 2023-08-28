@@ -1,5 +1,8 @@
 package com.easy;
 
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all
  * the functions of a normal queue (push, peek, pop, and empty).
@@ -42,6 +45,9 @@ package com.easy;
 public class _232_ImplementQueueUsingStacks {
 
     class MyQueue {
+
+        private Stack queue1 = new Stack();
+        private Stack queue2 = new Stack();
 
         public MyQueue() {
 

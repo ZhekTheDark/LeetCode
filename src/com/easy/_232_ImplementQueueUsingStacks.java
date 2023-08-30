@@ -1,5 +1,6 @@
 package com.easy;
 
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 /**
@@ -43,29 +44,57 @@ import java.util.Stack;
  */
 public class _232_ImplementQueueUsingStacks {
 
+    /**
+     * Runtime
+     * Details
+     * 0ms
+     * Beats 100.00%of users with Java
+     * Memory
+     * Details
+     * 40.50MB
+     * Beats 21.39%of users with Java
+     */
     class MyQueue {
 
-        private Stack queue1 = new Stack();
-        private Stack queue2 = new Stack();
+        private Stack<Integer> stack = new Stack();
+        private Stack<Integer> queue = new Stack();
 
         public MyQueue() {
 
         }
 
         public void push(int x) {
-
+            stack.push(x);
         }
 
         public int pop() {
-
+            if (queue.empty()) {
+                if (stack.empty()) {
+                    throw new EmptyStackException();
+                } else {
+                    while (!stack.empty()) {
+                        queue.push(stack.pop());
+                    }
+                }
+            }
+            return queue.pop();
         }
 
         public int peek() {
-
+            if (queue.empty()) {
+//                if (stack.empty()) {
+//                    throw new EmptyStackException();
+//                } else {
+                    while (!stack.empty()) {
+                        queue.push(stack.pop());
+                    }
+//                }
+            }
+            return queue.peek();
         }
 
         public boolean empty() {
-
+            return queue.empty() && stack.empty();
         }
     }
 }

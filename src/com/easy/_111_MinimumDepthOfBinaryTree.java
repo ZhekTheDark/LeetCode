@@ -6,6 +6,10 @@ public class _111_MinimumDepthOfBinaryTree {
 
     int max = Integer.MAX_VALUE;
 
+    /**
+     * Runtime: 1ms Beats 99.56% of users with Java
+     * Memory: 61.39MB Beats 83.64% of users with Java
+     */
     public int minDepth(TreeNode root) {
         if (root == null) {
             return 0;

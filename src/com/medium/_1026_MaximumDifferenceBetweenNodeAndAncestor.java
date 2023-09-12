@@ -6,6 +6,10 @@ public class _1026_MaximumDifferenceBetweenNodeAndAncestor {
 
     int max = 0;
 
+    /**
+     * Runtime: 0ms Beats 100.00% of users with Java
+     * Memory: 40.42MB Beats 91.51% of users with Java
+     */
     public int maxAncestorDiff(TreeNode root) {
         getDiff(root, root.val, root.val);
         return max;

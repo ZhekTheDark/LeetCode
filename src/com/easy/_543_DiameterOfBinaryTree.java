@@ -6,6 +6,10 @@ public class _543_DiameterOfBinaryTree {
 
     int diameter = 0;
 
+    /**
+     * Runtime: 0 ms Beats 100%
+     * Memory: 41.2 MB Beats 93.47%
+     */
     public int diameterOfBinaryTree(TreeNode root) {
         depth(root);
         return diameter;

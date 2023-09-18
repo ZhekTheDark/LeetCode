@@ -4,11 +4,23 @@ public class _707_DesignLinkedList {
 
     class MyLinkedList {
 
+        SinglyListNode node = null;
+
+        public class SinglyListNode {
+            int val;
+            SinglyListNode next;
+            SinglyListNode(int x) { val = x; }
+        }
+
         public MyLinkedList() {
 
         }
 
         public int get(int index) {
+            cur
+            while (index-- >= 0) {
+
+            }
 
         }
 

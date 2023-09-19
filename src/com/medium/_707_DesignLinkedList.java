@@ -4,12 +4,12 @@ public class _707_DesignLinkedList {
 
     class MyLinkedList {
 
-        SinglyListNode node = null;
+        ListNode node = null;
 
-        public class SinglyListNode {
+        public class ListNode {
             int val;
-            SinglyListNode next;
-            SinglyListNode(int x) { val = x; }
+            ListNode next;
+            ListNode(int x) { val = x; }
         }
 
         public MyLinkedList() {

@@ -9,7 +9,7 @@ public class _707_DesignLinkedList {
         public class ListNode {
             int val;
             ListNode next;
-            ListNode(int x) { val = x; }
+            public ListNode(int x) { val = x; }
         }
 
         public MyLinkedList() {
@@ -17,11 +17,11 @@ public class _707_DesignLinkedList {
         }
 
         public int get(int index) {
-            cur
-            while (index-- >= 0) {
-
+            ListNode cur = this.node;
+            while (index-- > 0) {
+                cur = cur.next;
             }
-
+            return cur.val;
         }
 
         public void addAtHead(int val) {

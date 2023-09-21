@@ -5,6 +5,7 @@ public class _707_DesignLinkedList {
     class MyLinkedList {
 
         ListNode node = null;
+        ListNode head = null;
 
         public class ListNode {
             int val;
@@ -17,7 +18,7 @@ public class _707_DesignLinkedList {
         }
 
         public int get(int index) {
-            ListNode cur = this.node;
+            ListNode cur = head;
             while (index-- > 0) {
                 cur = cur.next;
             }
@@ -25,7 +26,9 @@ public class _707_DesignLinkedList {
         }
 
         public void addAtHead(int val) {
-
+            ListNode newHead = new ListNode(val);
+            newHead.next = head;
+            head = newHead;
         }
 
         public void addAtTail(int val) {

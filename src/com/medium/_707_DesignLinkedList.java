@@ -6,6 +6,7 @@ public class _707_DesignLinkedList {
 
         ListNode node = null;
         ListNode head = null;
+        ListNode tail = null;
 
         public class ListNode {
             int val;
@@ -32,7 +33,9 @@ public class _707_DesignLinkedList {
         }
 
         public void addAtTail(int val) {
-
+            ListNode newTail = new ListNode(val);
+            tail.next = newTail;
+            tail = newTail;
         }
 
         public void addAtIndex(int index, int val) {

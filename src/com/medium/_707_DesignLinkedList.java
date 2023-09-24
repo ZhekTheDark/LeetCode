@@ -2,6 +2,10 @@ package com.medium;
 
 public class _707_DesignLinkedList {
 
+    /**
+     * Runtime: 9ms Beats 64.55% of users with Java
+     * Memory: 44.23MB Beats 51.63% of users with Java
+     */
     static class MyLinkedList {
 
         Node head;

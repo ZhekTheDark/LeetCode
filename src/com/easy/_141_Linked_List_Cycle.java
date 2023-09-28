@@ -12,8 +12,12 @@ public class _141_Linked_List_Cycle {
         }
     }
 
+    /**
+     * Runtime: 0ms Beats 100.00% of users with Java
+     * Memory: 43.44MB Beats 57.73% of users with Java
+     */
     public boolean hasCycle(ListNode head) {
-        if (if (head == null || head.next == null) {
+        if (head == null || head.next == null) {
             return false;
         }
         ListNode pointer1 = head;

@@ -13,29 +13,22 @@ public class _142_LinkedListCycleII {
     }
 
     public static ListNode detectCycle(ListNode head) {
-//        if (head == null || head.next == null) {
-//            return null;
-//        }
-//        ListNode slow = head;
-//        ListNode fast = head;
-//
-//        do {
-//            slow = slow.next;
-//            fast = fast.next;
-//            if (fast.next == null) {
-//                return null;
-//            }
-//            fast = fast.next;
-//            if (fast.next == null) {
-//                return null;
-//            }
-//        } while (slow != fast);
-//
-//        ListNode start = head;
-//        while (start != slow && start != slow.next) {
-//            start = start.next;
-//        }
-//        return start;
+        if (head == null || head.next == null) {
+            return null;
+        }
+        ListNode slow = head, fast = head, start = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                while (start != slow) {
+                    slow = slow.next;
+                    start = start.next;
+                }
+                return start;
+            }
+        }
+        return null;
     }
 
     public static void main(String[] args) {

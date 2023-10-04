@@ -12,6 +12,10 @@ public class _142_LinkedListCycleII {
         }
     }
 
+    /**
+     * Runtime: 0ms Beats 100.00% of users with Java
+     * Memory: 43.42MB Beats 82.86% of users with Java
+     */
     public static ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
             return null;

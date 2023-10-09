@@ -70,6 +70,10 @@ public class _160_IntersectionOfTwoLinkedLists {
         }
     }
 
+    /**
+     * Runtime: 1ms Beats 99.02% of users with Java
+     * Memory: 46.35MB Beats 84.33% of users with Java
+     */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) return null;
 

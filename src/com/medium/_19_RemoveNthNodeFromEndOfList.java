@@ -19,6 +19,10 @@ public class _19_RemoveNthNodeFromEndOfList {
         }
     }
 
+    /**
+     * Runtime: 0ms Beats 100.00% of users with Java
+     * Memory: 40.30MB Beats 80.13% of users with Java
+     */
     public ListNode removeNthFromEnd(ListNode head, int n) {
         if (head.next == null) {
             return null;

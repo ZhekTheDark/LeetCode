@@ -20,7 +20,18 @@ public class _203_RemoveLinkedListElements {
     }
 
     public ListNode removeElements(ListNode head, int val) {
-
-        return head;
+        ListNode beforeHead = new ListNode(-1);
+        beforeHead.next = head;
+        ListNode curr = head;
+        ListNode prev = beforeHead;
+        while (curr != null) {
+            if (curr.val == val) {
+                prev.next = curr.next;
+            } else {
+                prev = prev.next;
+            }
+            curr = curr.next;
+        }
+        return beforeHead.next;
     }
 }

@@ -40,6 +40,10 @@ public class _203_RemoveLinkedListElements {
         }
     }
 
+    /**
+     * Runtime: 1ms Beats 92.17% of users with Java
+     * Memory: 43.90MB Beats 99.43% of users with Java
+     */
     public ListNode removeElements(ListNode head, int val) {
         ListNode beforeHead = new ListNode(-1);
         beforeHead.next = head;

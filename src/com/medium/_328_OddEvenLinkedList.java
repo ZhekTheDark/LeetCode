@@ -24,4 +24,8 @@ package com.medium;
  * -10^6 <= Node.val <= 10^6
  */
 public class _328_OddEvenLinkedList {
+
+    public ListNode oddEvenList(ListNode head) {
+
+    }
 }
